@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,7 +9,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
     <LinearLayout
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="160dp"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="horizontal">
@@ -27,35 +28,46 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_gravity="center"
-        android:layout_marginTop="60dp">
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
 
         <TextView
-            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="MENUGEN"
             android:textColor="@color/black"
             android:textSize="48dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:backgroundTint="#FF8C00"
             android:text="로그인"
-            android:backgroundTint="#FF7F00"
-            android:textSize="24dp"/>
+            android:textSize="24dp" />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:backgroundTint="#FF7F00"
+            android:backgroundTint="#FF8C00"
             android:text="회원가입"
-            android:textSize="24dp"/>
+            android:textSize="24dp" />
+
+        <Button
+            android:id="@+id/skip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#FF8C00"
+            android:text="넘어가기(임시)"
+            android:textSize="24dp" />
+
     </LinearLayout>
 
 
-
-
 </LinearLayout>
+</layout>
