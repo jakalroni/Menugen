@@ -30,6 +30,7 @@
                 android:textSize="24dp"
                 android:textStyle="bold" />
         </LinearLayout>
+        //여기까지 상단바
 
         <LinearLayout
             android:layout_width="match_parent"

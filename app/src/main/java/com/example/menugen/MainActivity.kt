@@ -16,6 +16,16 @@ class MainActivity : AppCompatActivity() {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
+        binding.login.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.join.setOnClickListener {
+            val intent = Intent(this, JoinActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.skip.setOnClickListener {
             val intent = Intent(this, Survey::class.java)
             startActivity(intent)

@@ -29,6 +29,13 @@
             android:textColor="@color/black"
             android:textSize="24dp"
             android:textStyle="bold" />
-    </LinearLayout>
+        </LinearLayout>
+        //여기까지 상단바
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="140dp"
+            android:textSize="32sp"
+            android:text="식단 추천"/>
     </LinearLayout>
 </layout>

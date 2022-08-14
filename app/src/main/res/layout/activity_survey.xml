@@ -30,6 +30,7 @@
             android:textSize="24dp"
             android:textStyle="bold" />
     </LinearLayout>
+    //여기까지 상단바
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -69,7 +70,6 @@
             android:layout_height="52dp"
             android:backgroundTint="#FDA100"
             android:text="건강한 식습관"
-            android:onClick="btnHabit"
             android:textSize="24dp" />
         <Button
             android:id="@+id/disease"
