@@ -3,6 +3,7 @@ package com.example.menugen
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.example.menugen.databinding.ActivitySurvey3Binding
 
@@ -16,38 +17,8 @@ class Survey3Activity : AppCompatActivity() {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_survey3)
 
-        binding.age1.setOnClickListener {
-            val intent = Intent(this, Recommend::class.java)
-            startActivity(intent)
-        }
-
-        binding.age2.setOnClickListener {
-            val intent = Intent(this, Recommend::class.java)
-            startActivity(intent)
-        }
-
-        binding.age3.setOnClickListener {
-            val intent = Intent(this, Recommend::class.java)
-            startActivity(intent)
-        }
-
-        binding.age4.setOnClickListener {
-            val intent = Intent(this, Recommend::class.java)
-            startActivity(intent)
-        }
-
-        binding.age5.setOnClickListener {
-            val intent = Intent(this, Recommend::class.java)
-            startActivity(intent)
-        }
-
-        binding.age6.setOnClickListener {
-            val intent = Intent(this, Recommend::class.java)
-            startActivity(intent)
-        }
-
-        binding.age7.setOnClickListener {
-            val intent = Intent(this, Recommend::class.java)
+        binding.btnNext.setOnClickListener {
+            var intent = Intent(this, Recommend::class.java)
             startActivity(intent)
         }
 

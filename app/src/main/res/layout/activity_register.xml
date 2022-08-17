@@ -143,7 +143,7 @@
             android:layout_height="match_parent"
             android:lines="1"
             android:inputType="text"
-            android:hint="이름을 입력해주세요" />
+            android:hint="이름을 입력해주세요"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -171,31 +171,53 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/idContainer"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        android:layout_marginHorizontal="20dp"
-        app:helperText="@string/idHelper"
-        app:helperTextTextColor="@android:color/holo_red_dark"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:counterEnabled="true"
-        app:counterMaxLength="14"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/emailContainer">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/idContainer"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="256dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:counterEnabled="true"
+            app:counterMaxLength="14"
+            app:helperText="@string/idHelper"
+            app:helperTextTextColor="@android:color/holo_red_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emailContainer">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/idEditText"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:lines="1"
-            android:inputType="text"
-            android:hint="아이디를 입력해주세요" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idEditText"
+                android:layout_width="233dp"
+                android:layout_height="wrap_content"
+                android:hint="아이디를 입력해주세요"
+                android:inputType="text"
+                android:lines="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/button" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+            // 중복 확인 버튼 추가 (정렬 문제 미해결 상태)
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:text="중복 확인"
+            app:layout_constraintLeft_toRightOf="@+id/idEditText"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </LinearLayout>
+
 
 
     <com.google.android.material.textfield.TextInputLayout

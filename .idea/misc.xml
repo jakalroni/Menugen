@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/JaeWook/AndroidStudioProjects/Menugen/app/src/main/res/drawable/allergy.xml" value="0.206" />
+        <entry key="..\:/Users/JaeWook/AndroidStudioProjects/Menugen/app/src/main/res/drawable/bowl.xml" value="0.206" />
+        <entry key="..\:/Users/JaeWook/AndroidStudioProjects/Menugen/app/src/main/res/drawable/disease.xml" value="0.206" />
+        <entry key="..\:/Users/JaeWook/AndroidStudioProjects/Menugen/app/src/main/res/drawable/door.xml" value="0.206" />
         <entry key="..\:/Users/JaeWook/AndroidStudioProjects/Menugen/app/src/main/res/drawable/login_rec.xml" value="0.206" />
         <entry key="..\:/Users/JaeWook/AndroidStudioProjects/Menugen/app/src/main/res/layout/activity_log.xml" value="0.2669706180344478" />
         <entry key="..\:/Users/JaeWook/AndroidStudioProjects/Menugen/app/src/main/res/layout/activity_login.xml" value="0.21" />
@@ -18,9 +22,6 @@
         <entry key="..\:/Users/User/Desktop/app workspace/Menugen/app/src/main/res/layout/activity_main.xml" value="0.23489583333333333" />
         <entry key="..\:/Users/User/Desktop/app workspace/Menugen/app/src/main/res/layout/activity_register.xml" value="0.29030797101449274" />
         <entry key="..\:/Users/User/Desktop/app workspace/Menugen/app/src/main/res/layout/activity_survey.xml" value="0.3619791666666667" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/Menugen/app/src/main/res/layout/activity_log.xml" value="0.30416666666666664" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/Menugen/app/src/main/res/layout/activity_login.xml" value="0.286231884057971" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/Menugen/app/src/main/res/layout/activity_main.xml" value="0.286231884057971" />
       </map>
     </option>
   </component>
