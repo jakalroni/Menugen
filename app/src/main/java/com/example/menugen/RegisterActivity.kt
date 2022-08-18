@@ -36,7 +36,7 @@ class RegisterActivity : AppCompatActivity() {
         binding.btnDoRegister.setOnClickListener {
             Toast.makeText(this, "입력 검증 완료 가정, 회원가입 완료!", Toast.LENGTH_LONG).show()
             // 2. 설문 화면으로 넘어가기
-            var intent = Intent(this, Survey2Activity::class.java)
+            var intent = Intent(this, SurveyActivity::class.java)
                 .putExtra("uid",uid)
                 .putExtra("upw",upw)
                 .putExtra("uemail",uemail)
