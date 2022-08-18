@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -30,26 +29,35 @@
     </LinearLayout>
 
     <ImageView
-        android:layout_marginTop="60dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/door"
-        android:layout_gravity="center"/>
+        android:src="@drawable/folder"
+        android:layout_gravity="center"
+        android:layout_marginTop="74dp"/>
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="만나서 반갑습니다!"
-        android:textSize="30dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="50dp"
+        android:text="진행 상황 저장하기"
         android:textColor="@color/black"
-        android:gravity="center"/>
+        android:textStyle="bold"
+        android:textSize="28dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가입하시면, 진행 내용을 저장하고\n언제 어디서든 계정에 접근할 수 있습니다"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="30dp"/>
 
-<!--    입력란-->
+    <!--    입력란-->
 
     <LinearLayout
         android:layout_width="350dp"
-        android:layout_height="200dp"
+        android:layout_height="175dp"
         android:background="@drawable/login_rec"
         android:orientation="vertical"
         android:layout_gravity="center"
@@ -61,13 +69,13 @@
             android:layout_marginHorizontal="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/idEdit"
+                android:id="@+id/idEditText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:lines="1"
@@ -83,15 +91,15 @@
             android:layout_marginHorizontal="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             app:passwordToggleEnabled="true"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/emailContainer">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/pwEdit"
+                android:id="@+id/passwordEditText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:lines="1"
@@ -102,16 +110,54 @@
 
     </LinearLayout>
 
+<!--    <LinearLayout-->
+<!--        android:layout_margin="20dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="210dp"-->
+<!--        android:background="@drawable/login_rec"-->
+<!--        android:orientation="vertical">-->
+<!--        <TextView-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginHorizontal="20dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="이메일"-->
+<!--            android:textSize="20dp"-->
+<!--            android:textColor="@color/black"/>-->
+<!--        <EditText-->
+<!--            android:layout_marginTop="3dp"-->
+<!--            android:layout_marginHorizontal="20dp"-->
+<!--            android:padding="10dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:background="@drawable/login_rec"-->
+<!--            android:hint="Email" />-->
+<!--        <TextView-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginHorizontal="20dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="비밀번호"-->
+<!--            android:textSize="20dp"-->
+<!--            android:textColor="@color/black"/>-->
+<!--        <EditText-->
+<!--            android:layout_marginTop="3dp"-->
+<!--            android:layout_marginHorizontal="20dp"-->
+<!--            android:padding="10dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:background="@drawable/login_rec"-->
+<!--            android:hint="Password" />-->
+<!--    </LinearLayout>-->
+
     <Button
-        android:id="@+id/doLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:text="로그인 하기"
         android:textSize="24dp"
+        android:layout_marginTop="20dp"
         android:layout_marginHorizontal="100dp"
         android:backgroundTint="#FF7F00"
         android:layout_marginBottom="20dp"/>
 
 </LinearLayout>
-</layout>

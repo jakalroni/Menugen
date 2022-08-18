@@ -3,32 +3,27 @@ package com.example.menugen
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.databinding.DataBindingUtil
-import com.example.menugen.databinding.ActivityMainBinding
+import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        // 로그인, 회원가입 버튼 이동 시 LoginActivity, RegisterActivity로 이동
+        val btn_login = findViewById<Button>(R.id.btn_login)
+        val btn_register = findViewById<Button>(R.id.btn_register)
 
-        binding.login.setOnClickListener {
+        btn_login.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 
-        binding.join.setOnClickListener {
-            val intent = Intent(this, JoinActivity::class.java)
+        btn_register.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 
-        binding.skip.setOnClickListener {
-            val intent = Intent(this, Survey::class.java)
-            startActivity(intent)
-        }
     }
 }
