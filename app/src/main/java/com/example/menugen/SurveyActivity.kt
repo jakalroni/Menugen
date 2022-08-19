@@ -54,27 +54,6 @@ class SurveyActivity : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?) {}
         }
 
-        val age_itemList =
-            listOf("연령대 선택!","6-8","9-11", "12-14", "15-18", "19-29", "30-49", "50-64", "65-74", "75세 이상")
-        val age_adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, age_itemList)
-        binding.ageSpinner.adapter = age_adapter
-
-        binding.ageSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?,
-                position: Int,
-                id: Long
-            ) {
-                if (position != 0) Toast.makeText(
-                    this@SurveyActivity,
-                    age_itemList[position],
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {}
-        }
 
         var intent = Intent(this, Recommend::class.java)
 

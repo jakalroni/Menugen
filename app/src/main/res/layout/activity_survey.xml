@@ -46,6 +46,7 @@
             android:text="맞춤형 식단 분석을 위해 정보를 입력받습니다"
             android:gravity="center"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_gravity="center"
             android:textColor="@color/black"/>
 
@@ -64,7 +65,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
                 android:layout_marginLeft="30dp"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -81,30 +82,37 @@
                     android:gravity="center"/>
             </LinearLayout>
 
-            // 나이대 선택
+            // 키 입력
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
-                android:layout_marginRight="30dp"
-                android:orientation="vertical">
+                android:layout_marginLeft="0dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="나이"
                     android:textSize="20dp"
-                    android:textColor="@color/black"
-                    android:textAlignment="center" />
-                <Spinner
-                    android:id="@+id/age_spinner"
+                    android:textColor="@color/black"/>
+
+                <EditText
+                    android:id="@+id/user_age"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:spinnerMode="dropdown"
-                    android:gravity="center"/>
-            </LinearLayout>
+                    android:layout_weight="1"
+                    android:ems="4"
+                    android:inputType="textPersonName"
+                    android:hint="몇 살?"
+                    android:textAlignment="center"/>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="세" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -112,7 +120,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center">
-            // 키 입력
+            // 나이 입력
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -180,10 +188,10 @@
             android:layout_width="match_parent"
             android:layout_height="2px"
             android:background="#FF7F00"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="20dp"/>
 
         // 알러지 체크 설문
         <LinearLayout
@@ -203,7 +211,8 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
 
                 <CheckBox
                     android:id="@+id/allergy1"
@@ -244,7 +253,10 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp">
 
                 <CheckBox
                     android:id="@+id/allergy6"
@@ -330,45 +342,45 @@
             android:layout_width="match_parent"
             android:layout_height="2px"
             android:background="#FF7F00"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="20dp"/>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
 
-            android:layout_marginLeft="30dp">
+<!--            android:layout_marginLeft="30dp">-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="질환을 선택해주세요"
-                android:textSize="20dp"
-                android:textColor="@color/black"
-                android:drawableLeft="@drawable/disease"
-                android:drawablePadding="10dp"/>
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="질환을 선택해주세요"-->
+<!--                android:textSize="20dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:drawableLeft="@drawable/disease"-->
+<!--                android:drawablePadding="10dp"/>-->
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content">-->
 
-                <CheckBox
-                    android:id="@+id/disease1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="false"
-                    android:text="당뇨병"/>
-                <CheckBox
-                    android:id="@+id/disease2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="false"
-                    android:text="해당사항 없음"/>
-            </LinearLayout>
-        </LinearLayout>
+<!--                <CheckBox-->
+<!--                    android:id="@+id/disease1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:checked="false"-->
+<!--                    android:text="당뇨병"/>-->
+<!--                <CheckBox-->
+<!--                    android:id="@+id/disease2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:checked="false"-->
+<!--                    android:text="해당사항 없음"/>-->
+<!--            </LinearLayout>-->
+<!--        </LinearLayout>-->
 
 
         <Button
@@ -377,7 +389,7 @@
             android:layout_height="wrap_content"
             android:text="다음"
             android:backgroundTint="#FF7F00"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginHorizontal="100dp"/>
 
     </LinearLayout>
