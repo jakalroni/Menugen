@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         // 로그인, 회원가입 버튼 이동 시 LoginActivity, RegisterActivity로 이동
         val btn_login = findViewById<Button>(R.id.btn_login)
         val btn_register = findViewById<Button>(R.id.btn_register)
+        val btn_recommend = findViewById<Button>(R.id.btn_recommend)
 
         btn_login.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
@@ -22,6 +23,11 @@ class MainActivity : AppCompatActivity() {
 
         btn_register.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
+
+        btn_recommend.setOnClickListener {
+            val intent = Intent(this, Recommend::class.java)
             startActivity(intent)
         }
 

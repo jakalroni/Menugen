@@ -5,7 +5,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Recommend"
+        tools:context=".Recommend2"
         android:orientation="vertical">
 
         <LinearLayout
@@ -55,7 +55,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="오늘의 식단 (한끼)"
+                android:text="대분류 - 밥류"
                 android:textSize="15dp"
                 android:textColor="#ffffff"
                 android:layout_gravity="center"
@@ -64,7 +64,7 @@
         </androidx.cardview.widget.CardView>
 
 
-        // 식단 추천: 대분류 1,2번
+        // 식단 추천: 중분류 1,2번
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -72,7 +72,7 @@
             android:layout_gravity="center"
             android:layout_margin="20dp">
 
-            // 식단 추천: 대분류 1번
+            // 식단 추천: 중분류 1번
             <LinearLayout
                 android:id="@+id/large_menu1"
                 android:layout_width="wrap_content"
@@ -86,17 +86,17 @@
                 <ImageView
                     android:layout_width="125dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/recommend_img1"/>
+                    android:src="@drawable/recommend2_img1"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="대분류 1번 (밥류)"
+                    android:text="중분류 1번 (쌀밥)"
                     android:textSize="15dp"
                     android:layout_gravity="center"/>
             </LinearLayout>
 
-            // 식단 추천: 대분류 2번
+            // 식단 추천: 중분류 2번
             <LinearLayout
                 android:id="@+id/large_menu2"
                 android:layout_width="wrap_content"
@@ -110,18 +110,18 @@
                 <ImageView
                     android:layout_width="125dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/recommend_img2"/>
+                    android:src="@drawable/recommend2_img2"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="대분류 2번 (국류)"
+                    android:text="중분류 2번 (잡곡밥류)"
                     android:textSize="15dp"
                     android:layout_gravity="center"/>
             </LinearLayout>
         </LinearLayout>
 
-        // 식단 추천: 대분류 3,4번
+        // 식단 추천: 중분류 3,4번
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -129,7 +129,7 @@
             android:layout_gravity="center"
             android:layout_margin="20dp">
 
-            // 식단 추천: 대분류 3번
+            // 식단 추천: 중분류 3번
             <LinearLayout
                 android:id="@+id/large_menu3"
                 android:layout_width="wrap_content"
@@ -144,17 +144,17 @@
                     android:layout_width="125dp"
                     android:layout_height="100dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/recommend_img3" />
+                    android:src="@drawable/recommend2_img3" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="대분류 3번 (구이류)"
+                    android:text="중분류 3번 (채소밥류)"
                     android:textSize="15dp"
                     android:layout_gravity="center"/>
             </LinearLayout>
 
-            // 식단 추천: 대분류 4번
+            // 식단 추천: 중분류 4번
             <LinearLayout
                 android:id="@+id/large_menu4"
                 android:layout_width="wrap_content"
@@ -168,29 +168,23 @@
                 <ImageView
                     android:layout_width="125dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/recommend_img4"/>
+                    android:src="@drawable/recommend2_img4"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="대분류 4번 (무침류)"
+                    android:text="중분류 4번 (비빔밥류)"
                     android:textSize="15dp"
                     android:layout_gravity="center"/>
             </LinearLayout>
 
         </LinearLayout>
 
-        // 식단 평가 버튼
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="식단 평가"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"/>
+
 
         // 하단바
         <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_marginTop="110dp"
             android:id="@+id/bottom_navigationview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

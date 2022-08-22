@@ -57,6 +57,16 @@
             android:backgroundTint="#FF7F00"
             android:text="회원가입"
             android:textSize="24dp"/>
+
+        <Button
+            android:id="@+id/btn_recommend"
+            android:layout_marginHorizontal="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#FF7F00"
+            android:text="식단추천(임시)"
+            android:textSize="24dp"/>
     </LinearLayout>
 
 
