@@ -3,6 +3,7 @@ package com.example.menugen
 import com.google.gson.annotations.SerializedName
 import retrofit2.Call
 import retrofit2.http.*
+import java.lang.reflect.Array
 
 data class ResponseDC(var result:String? = null)
 
@@ -16,10 +17,18 @@ public interface LoginService{
     @FormUrlEncoded
     @POST("/users/login")
     fun requestLogin(
-        @Field("userid") userid:String,
-        @Field("userpw") userpw:String
+        @Field("userId") userid:String,
+        @Field("userPassword") userPassword:String
     ) : Call<Login>
 }
+public interface LoginReduple{
+    @FormUrlEncoded
+    @POST("/users/signin")
+    fun requestLoginReduple(
+        @Field("userId") userid:String
+    ) : Call<Reduple>
+}
+
 // 회원가입
 public interface JoinService{
     @FormUrlEncoded
@@ -31,8 +40,11 @@ public interface JoinService{
         @Field("email") email:String,
         @Field("sex") sex: Int,
         @Field("age") age: Int,
-        @Field("height") height: Int,
-        @Field("weight") weight: Int
+        @Field("height") height: Float,
+        @Field("weight") weight: Float,
+        @Field("basal") basal: Double,
+        @Field("allergy") allergy: List<String>
+        //순서대로 ID, PW, 이름, 이메일, 성별, 나이, 키, 몸무게, 대사량 계산식
         //@Field("Uallergy") Uallergy:String,
         //@Field("Udia") Udia:String
     ) : Call<Join>

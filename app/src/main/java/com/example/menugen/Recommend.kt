@@ -17,27 +17,27 @@ class Recommend : AppCompatActivity() {
 
 
         large_menu1.setOnClickListener {
-            val intent = Intent(this, Recommend2::class.java)
-            intent.putExtra("large_menu", "1")
-            startActivity(intent)
+            val newintent = Intent(this, Recommend2::class.java)
+            newintent.putExtra("large_menu", "1")
+            startActivity(newintent)
         }
 
         large_menu2.setOnClickListener {
-            val intent = Intent(this, Recommend2::class.java)
-            intent.putExtra("large_menu", "2")
-            startActivity(intent)
+            val newintent = Intent(this, Recommend2::class.java)
+            newintent.putExtra("large_menu", "2")
+            startActivity(newintent)
         }
 
         large_menu3.setOnClickListener {
-            val intent = Intent(this, Recommend2::class.java)
-            intent.putExtra("large_menu", "3")
-            startActivity(intent)
+            val newintent = Intent(this, Recommend2::class.java)
+            newintent.putExtra("large_menu", "3")
+            startActivity(newintent)
         }
 
         large_menu4.setOnClickListener {
-            val intent = Intent(this, Recommend2::class.java)
-            intent.putExtra("large_menu", "4")
-            startActivity(intent)
+            val newintent = Intent(this, Recommend2::class.java)
+            newintent.putExtra("large_menu", "4")
+            startActivity(newintent)
         }
     }
 }

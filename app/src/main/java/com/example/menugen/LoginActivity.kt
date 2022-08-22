@@ -29,10 +29,7 @@ class LoginActivity : AppCompatActivity() {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-        val intent: Intent = Intent(this, Recommend::class.java)
-
         var server = retrofit.create(LoginService::class.java)
-
 
 
         super.onCreate(savedInstanceState)
@@ -41,31 +38,34 @@ class LoginActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_login)
 
         binding.doLogin.setOnClickListener {
+            val intent: Intent = Intent(this, Recommend::class.java)
+
             // 로그인 시 ID & PW 받아오기
-            val uid : String = findViewById<EditText>(R.id.idEdit).text.toString()
-            val upw : String = findViewById<EditText>(R.id.pwEdit).text.toString()
+            val uid: String = findViewById<EditText>(R.id.idEdit).text.toString()
+            val upw: String = findViewById<EditText>(R.id.pwEdit).text.toString()
 
             // 서버로 ID & PW 보내기
-            server.requestLogin(uid,upw).enqueue(object : Callback<Login>{
-                override fun onFailure(call: Call<Login>, t:Throwable){
-                    Log.d("로그인 실패","로그인 실패")
+            server.requestLogin(uid, upw).enqueue(object : Callback<Login> {
+                override fun onFailure(call: Call<Login>, t: Throwable) {
+                    Log.d("로그인 실패", "로그인 실패")
                 }
+
                 override fun onResponse(call: Call<Login>, response: Response<Login>) {
-                    val userlogin=response.body()
-                    Log.d("코드", userlogin.toString())
+                    val userlogin = response.body()
+                    val alllist = userlogin?.allergy.toString()
+                    // 식단추천화면에 사용자 알러지 정보 전달
+                    intent.putExtra("allergy", alllist)
+
                     // 가입된 계정이 아니면 X, 맞으면 다음 화면
-                    if(userlogin?.code==200){
-                        Log.d("로그인 성공", "로그인 성공 $uid, $upw")
+                    if (userlogin?.code == 200) {
+                        Log.d("로그인 성공", "로그인 성공 $uid, $upw, $alllist")
                         startActivity(intent)
-                    }
-                    else{
-                        //Log.d("로그인 실패", "로그인 실패")
+                    } else {
+                        Toast.makeText(this@LoginActivity, "아이디 중복검사를 진행해주세요!", Toast.LENGTH_LONG)
+                            .show()
                     }
                 }
-
             })
-
         }
-
     }
 }

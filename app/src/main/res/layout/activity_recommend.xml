@@ -55,14 +55,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="오늘의 식단 (한끼)"
-                android:textSize="15dp"
-                android:textColor="#ffffff"
                 android:layout_gravity="center"
-                android:padding="10dp"/>
-
+                android:padding="10dp"
+                android:text="오늘의 식단 (한끼)"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
         </androidx.cardview.widget.CardView>
-
 
         // 식단 추천: 대분류 1,2번
         <LinearLayout
@@ -198,6 +196,5 @@
             app:itemBackground="@color/white"
             app:labelVisibilityMode="labeled"
             app:menu="@menu/bottom_menu" />
-
     </LinearLayout>
 </layout>

@@ -1,12 +1,14 @@
 package com.example.menugen
 
 data class Join(
+    var code: Int,
     var identify: String,
     var password: String,
     var name: String,
     var email: String,
-    var sex: Int=1,
-    var age: Int=1,
-    var height: Int=1,
-    var weight: Int=1
+    var sex: Int,
+    var age: Int,
+    var height: Int,
+    var weight: Int,
+    var basal: Float
 )

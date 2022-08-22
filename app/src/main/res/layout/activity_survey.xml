@@ -99,7 +99,7 @@
                     android:textColor="@color/black"/>
 
                 <EditText
-                    android:id="@+id/user_age"
+                    android:id="@+id/userage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -381,8 +381,6 @@
 <!--                    android:text="해당사항 없음"/>-->
 <!--            </LinearLayout>-->
 <!--        </LinearLayout>-->
-
-
         <Button
             android:id="@+id/btn_next"
             android:layout_width="match_parent"
@@ -391,6 +389,5 @@
             android:backgroundTint="#FF7F00"
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="100dp"/>
-
     </LinearLayout>
 </layout>
