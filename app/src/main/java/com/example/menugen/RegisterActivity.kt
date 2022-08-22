@@ -13,6 +13,12 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+// 회원가입 절차를 위한 변수
+var idPass = 1
+var pwPass = 1
+var emailPass = 1
+var namePass = 1
+
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegisterBinding
@@ -76,8 +82,8 @@ class RegisterActivity : AppCompatActivity() {
             intent.putExtra("uname",uname)
             Log.d("성공", "성공 $uid, $upw, $uemail, $uname")
 
-            // 다음 화면 and 빈칸 존재 시 예외처리
-            if(uid != "" || upw != "" || uemail != "" || uname != ""){
+            // 회원가입 입력사항 예외처리
+            if(idPass == 0 && pwPass == 0 && emailPass == 0 && namePass == 0){
                 // ID 중복 확인 시 중복된 아이디가 아니면
                 if(duplepoint == 200){
                     startActivity(intent)
@@ -87,7 +93,7 @@ class RegisterActivity : AppCompatActivity() {
                 }
             }
             else{
-                Toast.makeText(this, "빈칸을 모두 채워주세요!", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "빈칸을 모두 제대로 채워주세요!", Toast.LENGTH_LONG).show()
             }
         }
     }
@@ -106,90 +112,97 @@ class RegisterActivity : AppCompatActivity() {
     private fun validName(): String?
     {
         val nameText = binding.UnameEditText.text.toString()
-        if(nameText.length < 2)
-        {
+        if(nameText.length < 2) {
+            namePass = 1
             return "최소 2자 이상 입력해주세요."
         }
-        if(!nameText.matches("^[a-zA-Z]*\$".toRegex()))
-        {
+        else{ namePass = 0 }
+
+        if(!nameText.matches("^[a-zA-Zㄱ-ㅎ가-힣]*\$".toRegex())) {
+            namePass = 0
             return "한글 및 영어만 입력해주세요."
         }
+        else { namePass = 0 }
         return null
     }
 
     // 이메일 유효성 검증
     private fun emailFocusListener() {
         binding.UemailEditText.setOnFocusChangeListener { _, focused ->
-            if(!focused)
-            {
+            if(!focused) {
                 binding.emailContainer.helperText = validEmail()
             }
         }
     }
 
-    private fun validEmail(): String?
-    {
+    private fun validEmail(): String? {
         val emailText = binding.UemailEditText.text.toString()
-        if(!Patterns.EMAIL_ADDRESS.matcher(emailText).matches())
-        {
+        // if(!Patterns.EMAIL_ADDRESS.matcher(emailText).matches())
+        if(!emailText.matches("[a-zA-X0-9]@[a-zA-Z0-9].[a-zA-Z0-9]".toRegex())) {
+            emailPass = 1
             return "잘못된 이메일 형식입니다."
         }
+        else { emailPass = 0 }
         return null
     }
 
     // 아이디 유효성 검증
     private fun idFocusListener() {
         binding.UidEditText.setOnFocusChangeListener { _, focused ->
-            if(!focused)
-            {
+            if(!focused) {
                 binding.idContainer.helperText = validId()
             }
         }
     }
 
-    private fun validId(): String?
-    {
+    private fun validId(): String? {
         val idText = binding.UidEditText.text.toString()
-        if(idText.length < 6)
-        {
+        if(idText.length < 6) {
+            idPass = 1
             return "최소 6자 이상 입력해주세요."
         }
-        if(!idText.matches("^[a-zA-Z0-9]*$".toRegex()))
-        {
+        else { idPass = 0 }
+        if(!idText.matches("^[a-zA-Z0-9]*$".toRegex())) {
+            idPass = 1
             return "영어 및 숫자만 입력해주세요."
         }
+        else { idPass = 0 }
         return null
     }
 
     // 비밀번호 유효성 검증 + 이름 간단히 변경
     private fun passwordFocusListener() {
         binding.UpwEditText.setOnFocusChangeListener { _, focused ->
-            if(!focused)
-            {
+            if(!focused) {
                 binding.passwordContainer.helperText = validPassword()
             }
         }
     }
 
-    private fun validPassword(): String?
-    {
+    private fun validPassword(): String? {
         val passwordText = binding.UpwEditText.text.toString()
-        if(passwordText.length < 8)
-        {
+        if(passwordText.length < 8) {
+            pwPass = 1
             return "최소 8자 이상 입력해주세요."
-        }
-        if(!passwordText.matches(".*[A-Z].*".toRegex()))
-        {
+        } else { pwPass = 0 }
+
+        /*
+        if(!passwordText.matches(".*[A-Z].*".toRegex())) {
+            pwPass = 1
             return "대문자 1개 이상을 포함해야합니다."
-        }
-        if(!passwordText.matches(".*[a-z].*".toRegex()))
-        {
+        } else { pwPass = 0 }
+
+        if(!passwordText.matches(".*[a-z].*".toRegex())) {
+            pwPass = 1
             return "소문자 1개 이상을 포함해야합니다."
-        }
-        if(!passwordText.matches(".*[@#\$%^&+=].*".toRegex()))
-        {
+        } else { pwPass = 0 }
+         */
+
+        if(!passwordText.matches(".*[@#\$%^&+=].*".toRegex())) {
+            pwPass = 1
             return "특수문자 1개 이상을 포함해야합니다. (@#\$%^&+=)"
-        }
+        } else { pwPass = 0 }
+
         return null
     }
 }
