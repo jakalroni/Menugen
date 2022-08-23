@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
+import android.widget.TextView
 
 class Recommend : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +16,9 @@ class Recommend : AppCompatActivity() {
         val large_menu3 = findViewById<LinearLayout>(R.id.large_menu3)
         val large_menu4 = findViewById<LinearLayout>(R.id.large_menu4)
 
+        val userall = intent.getStringExtra("alllist").toString()
+        // val alltext = findViewById<TextView>(R.id.idEdit)
+        // alltext.setText(userall)
 
         large_menu1.setOnClickListener {
             val newintent = Intent(this, Recommend2::class.java)

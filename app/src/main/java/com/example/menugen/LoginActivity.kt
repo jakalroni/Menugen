@@ -48,6 +48,7 @@ class LoginActivity : AppCompatActivity() {
             server.requestLogin(uid, upw).enqueue(object : Callback<Login> {
                 override fun onFailure(call: Call<Login>, t: Throwable) {
                     Log.d("로그인 실패", "로그인 실패")
+                    Toast.makeText(this@LoginActivity, "서버 오류! 로그인 실패", Toast.LENGTH_LONG).show()
                 }
 
                 override fun onResponse(call: Call<Login>, response: Response<Login>) {
@@ -61,7 +62,7 @@ class LoginActivity : AppCompatActivity() {
                         Log.d("로그인 성공", "로그인 성공 $uid, $upw, $alllist")
                         startActivity(intent)
                     } else {
-                        Toast.makeText(this@LoginActivity, "아이디 중복검사를 진행해주세요!", Toast.LENGTH_LONG)
+                        Toast.makeText(this@LoginActivity, "가입된 계정이 아닙니다!", Toast.LENGTH_LONG)
                             .show()
                     }
                 }
