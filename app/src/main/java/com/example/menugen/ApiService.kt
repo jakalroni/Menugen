@@ -1,5 +1,6 @@
 package com.example.menugen
 
+// 서버에 데이터 전송을 위한 코드
 import com.google.gson.annotations.SerializedName
 import retrofit2.Call
 import retrofit2.http.*
@@ -21,6 +22,8 @@ public interface LoginService{
         @Field("userPassword") userPassword:String
     ) : Call<Login>
 }
+
+// 아이디 중복 확인
 public interface LoginReduple{
     @FormUrlEncoded
     @POST("/users/signin")

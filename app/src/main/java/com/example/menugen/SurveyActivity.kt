@@ -1,5 +1,6 @@
 package com.example.menugen
 
+// 회원가입 후 설문조사 창
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

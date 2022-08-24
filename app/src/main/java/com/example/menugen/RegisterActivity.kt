@@ -1,5 +1,6 @@
 package com.example.menugen
 
+// 회원가입 시 아이디 & 비밀번호 & 이름 & 이메일 입력 창
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,5 +1,6 @@
 package com.example.menugen
 
+// 메인화면 = 로그인 & 회원가입 버튼 창
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

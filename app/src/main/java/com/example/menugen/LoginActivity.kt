@@ -1,5 +1,6 @@
 package com.example.menugen
 
+// 로그인 창
 import android.content.Intent
 import android.content.SyncRequest
 import androidx.appcompat.app.AppCompatActivity
