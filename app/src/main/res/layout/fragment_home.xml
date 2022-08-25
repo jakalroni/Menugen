@@ -61,11 +61,13 @@
                 android:gravity="center">
 
                 <ImageView
+                    android:id="@+id/menu1"
                     android:layout_width="125dp"
                     android:layout_height="100dp"
                     android:src="@drawable/rice"/>
 
                 <TextView
+                    android:id="@+id/menu1_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="대분류 1번 (밥류)"
@@ -85,11 +87,13 @@
                 android:gravity="center">
 
                 <ImageView
+                    android:id="@+id/menu2"
                     android:layout_width="125dp"
                     android:layout_height="100dp"
                     android:src="@drawable/tang"/>
 
                 <TextView
+                    android:id="@+id/menu2_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="대분류 2번 (국류)"
@@ -123,12 +127,14 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/menu3"
                     android:layout_width="125dp"
                     android:layout_height="100dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/gui" />
 
                 <TextView
+                    android:id="@+id/menu3_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -149,11 +155,13 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/menu4"
                     android:layout_width="125dp"
                     android:layout_height="100dp"
                     android:src="@drawable/muchim" />
 
                 <TextView
+                    android:id="@+id/menu4_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

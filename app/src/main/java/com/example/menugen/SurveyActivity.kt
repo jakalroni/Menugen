@@ -4,6 +4,8 @@ package com.example.menugen
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.View
 import android.widget.*
@@ -215,5 +217,25 @@ class SurveyActivity : AppCompatActivity() {
                 // startActivity(newintent)
             }
         }
+    }
+    // 뒤로가기 방지를 위한 변수
+    private var doubleBackToExit = false
+
+    // 뒤로가기 방지 및 두번 뒤로가기 시 종료
+    override fun onBackPressed() {
+        if(doubleBackToExit){
+            finishAffinity()
+        } else {
+            Toast.makeText(this, "종료하시려면 뒤로가기를 한번 더 눌러주세요", Toast.LENGTH_SHORT).show()
+            doubleBackToExit = true
+            runDelayed(1500L){
+                doubleBackToExit = false
+            }
+        }
+    }
+
+    // 뒤로가기를 일정시간 내에 두번 입력하는 것 감지하는 함수
+    fun runDelayed(millis: Long, function: () -> Unit){
+        Handler(Looper.getMainLooper()).postDelayed(function, millis)
     }
 }
