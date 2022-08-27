@@ -83,6 +83,8 @@ class RegisterActivity : AppCompatActivity() {
             intent.putExtra("uname",uname)
             Log.d("성공", "성공 $uid, $upw, $uemail, $uname")
 
+            startActivity(intent)
+            /*
             // 회원가입 입력사항 예외처리
             if(idPass == 0 && pwPass == 0 && emailPass == 0 && namePass == 0){
                 // ID 중복 확인 시 중복된 아이디가 아니면
@@ -95,7 +97,7 @@ class RegisterActivity : AppCompatActivity() {
             }
             else{
                 Toast.makeText(this, "빈칸을 모두 제대로 채워주세요!", Toast.LENGTH_LONG).show()
-            }
+            }*/
         }
     }
     // ---------------------------------------디자인-------------------------------------------
@@ -139,7 +141,7 @@ class RegisterActivity : AppCompatActivity() {
     private fun validEmail(): String? {
         val emailText = binding.UemailEditText.text.toString()
         // if(!Patterns.EMAIL_ADDRESS.matcher(emailText).matches())
-        if(!emailText.matches("[a-zA-X0-9]@[a-zA-Z0-9].[a-zA-Z0-9]".toRegex())) {
+        if(!emailText.matches("^[a-zA-X0-9]+@[a-zA-Z0-9]+.[a-zA-Z0-9]+$".toRegex())) {
             emailPass = 1
             return "잘못된 이메일 형식입니다."
         }

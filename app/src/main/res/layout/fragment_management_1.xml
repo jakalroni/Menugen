@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Management1"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                // 검색란
+                <SearchView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:iconifiedByDefault="false"
+                    android:queryHint="식단 검색"
+                    android:layout_gravity="center"/>
+
+                //식단관리 영역
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/edge"
+                    android:orientation="vertical">
+
+                    // 태그 버튼 목록1 -> 클릭시 enable="true"로 되게 해야함
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp">
+                        <Button
+                            android:id="@+id/tag1"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="밥"
+                            android:layout_margin="2dp"
+                            android:clickable="false"/>
+                        <Button
+                            android:id="@+id/tag2"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="국"
+                            android:layout_margin="2dp"
+                            android:enabled="false"/>
+                        <Button
+                            android:id="@+id/tag3"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="면 및 만두"
+                            android:layout_margin="2dp"
+                            android:enabled="false"/>
+                        <Button
+                            android:id="@+id/tag4"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="찌개"
+                            android:layout_margin="2dp"
+                            android:enabled="false"/>
+                        <Button
+                            android:id="@+id/tag5"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="조림"
+                            android:layout_margin="2dp"
+                            android:enabled="false"/>
+                    </LinearLayout>
+                    // 태그 버튼 목록2
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp">
+                        <Button
+                            android:id="@+id/tag6"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="구이"
+                            android:layout_margin="2dp"
+                            android:enabled="false"/>
+                        <Button
+                            android:id="@+id/tag7"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="전"
+                            android:layout_margin="2dp"
+                            android:enabled="false"/>
+                        <Button
+                            android:id="@+id/tag8"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="튀김"
+                            android:layout_margin="2dp"
+                            android:enabled="false"/>
+                        <Button
+                            android:id="@+id/tag9"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="볶음"
+                            android:layout_margin="2dp"
+                            android:enabled="false"/>
+                    </LinearLayout>
+
+
+                    // 음식목록란
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/edge"
+                        android:layout_margin="10dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="15dp"
+                            app:cardBackgroundColor="#EA5656"
+                            android:layout_gravity="left"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="10dp"
+                                android:text="음식 목록"
+                                android:textColor="#ffffff"
+                                android:textSize="15dp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#32FD4987"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:orientation="vertical"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="100dp"
+                                    android:layout_height="75dp"
+                                    android:src="@drawable/rice"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="소분류(~밥)"
+                                    android:textSize="12dp"
+                                    android:layout_gravity="center"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#32FD4987"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:orientation="vertical"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="100dp"
+                                    android:layout_height="75dp"
+                                    android:src="@drawable/tang"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="소분류(~탕)"
+                                    android:textSize="12dp"
+                                    android:layout_gravity="center"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#32FD4987"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:orientation="vertical"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="100dp"
+                                    android:layout_height="75dp"
+                                    android:src="@drawable/muchim"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="소분류(~무침)"
+                                    android:textSize="12dp"
+                                    android:layout_gravity="center"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    // 식사량 선택란
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/edge"
+                        android:layout_margin="10dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="15dp"
+                            app:cardBackgroundColor="#EA5656"
+                            android:layout_gravity="left"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="10dp"
+                                android:text="식사량 선택"
+                                android:textColor="#ffffff"
+                                android:textSize="15dp" />
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                // 다음화면 넘어가는 버튼
+                <Button
+                    android:id="@+id/btn_settingFinish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="식단저장하러 가기"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</layout>
