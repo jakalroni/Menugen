@@ -46,9 +46,6 @@ class HomeFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-
-
-
     }
 
     override fun onCreateView(
@@ -69,8 +66,11 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         var meal = AutoLogin.getUserMeal(requireContext())
 
+        /*
         val test = home.findViewById<TextView>(R.id.Top_Title)
-        test.setText(meal)
+        test.setText(meal.toString())
+        Log.d("제발", meal)
+         */
 
     }
     // <------------------------------------------ 여기까지 Fragment 수정점 (feat. 석철)

@@ -23,8 +23,11 @@ class Recommend : AppCompatActivity() {
         bundle.putString("식단", temp.toString())
         HomeFragment.arguments = bundle
          */
-        val temp = arrayOf(arrayOf("밥류","쌀밥"), arrayOf("국류","된장국"), arrayOf("구이류","생선구이"), arrayOf("무침류","무침"))
-        AutoLogin.setUserMeal(this@Recommend, temp)
+
+        // val temp = arrayOf(arrayOf("밥류","쌀밥"), arrayOf("국류","된장국"), arrayOf("구이류","생선구이"), arrayOf("무침류","무침"))
+        // AutoLogin.setUserMeal(this@Recommend, temp)
+
+
 
         // 하단 탭이 눌렸을 때 화면을 전환하기 위한 객체 생성
         var bnv_main = findViewById(R.id.bottom_navigationview) as BottomNavigationView

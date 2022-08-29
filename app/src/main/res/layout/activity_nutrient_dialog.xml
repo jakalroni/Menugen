@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/rounded_corner"
+        android:padding="40dp">
+
+        // 클릭 메뉴 이미지, 이름
+        <ImageView
+            android:layout_width="125dp"
+            android:layout_height="100dp"
+            android:src="@drawable/rice"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="대분류(밥류)"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#000"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="소분류(쌀밥)"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="30dp"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="#000" />
+
+        // 영양소 10종 정보란
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="에너지(kcal) : 280"
+            android:textAlignment="center"
+            android:lineSpacingExtra="5dp"
+            android:layout_marginBottom="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="단백질(g) : 21"
+            android:textAlignment="center"
+            android:lineSpacingExtra="5dp"
+            android:layout_marginBottom="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="지질(g) : 40"
+            android:textAlignment="center"
+            android:lineSpacingExtra="5dp"
+            android:layout_marginBottom="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="탄수화물(g) : 230"
+            android:textAlignment="center"
+            android:lineSpacingExtra="5dp"
+            android:layout_marginBottom="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="총 당류(g) : 400"
+            android:textAlignment="center"
+            android:lineSpacingExtra="5dp"
+            android:layout_marginBottom="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="총 지방산(g) : 15"
+            android:textAlignment="center"
+            android:lineSpacingExtra="5dp"
+            android:layout_marginBottom="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="총 포화 지방산(g) : 9"
+            android:textAlignment="center"
+            android:lineSpacingExtra="5dp"
+            android:layout_marginBottom="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="칼슘(mg) : 102"
+            android:textAlignment="center"
+            android:lineSpacingExtra="5dp"
+            android:layout_marginBottom="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나트륨(mg) : 60"
+            android:textAlignment="center"
+            android:lineSpacingExtra="5dp"
+            android:layout_marginBottom="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="콜레스테롤(mg) : 34"
+            android:textAlignment="center"
+            android:lineSpacingExtra="5dp"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/dial_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="닫기"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"/>
+
+    </LinearLayout>
+</LinearLayout >
