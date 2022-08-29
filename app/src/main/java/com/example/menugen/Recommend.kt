@@ -9,6 +9,10 @@ import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class Recommend : AppCompatActivity() {
+    // Fragment간 이동을 위한 변수
+    lateinit var management1: Management_1
+    lateinit var setting: SettingFragment
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recommend)
@@ -42,12 +46,12 @@ class Recommend : AppCompatActivity() {
                     supportFragmentManager.beginTransaction().replace(R.id.nav_container, homeFragment).commit()
                 }
                 R.id.setting -> {
-                    val boardFragment = SettingFragment()
-                    supportFragmentManager.beginTransaction().replace(R.id.nav_container, boardFragment).commit()
+                    val settingFragment = SettingFragment()
+                    supportFragmentManager.beginTransaction().replace(R.id.nav_container, settingFragment).commit()
                 }
                 R.id.info -> {
-                    val settingFragment = InfoFragment()
-                    supportFragmentManager.beginTransaction().replace(R.id.nav_container, settingFragment).commit()
+                    val infoFragment = Management_1()
+                    supportFragmentManager.beginTransaction().replace(R.id.nav_container, infoFragment).commit()
                 }
             }
             true
@@ -75,5 +79,26 @@ class Recommend : AppCompatActivity() {
     // 뒤로가기를 일정시간 내에 두번 입력하는 것 감지하는 함수
     fun runDelayed(millis: Long, function: () -> Unit){
         Handler(Looper.getMainLooper()).postDelayed(function, millis)
+    }
+
+    // Fragment간 이동을 위한 함수
+    fun changeFragment(index: Int){
+        management1 = Management_1()
+        setting = SettingFragment()
+        when(index){
+            1 -> {
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.nav_container, management1)
+                    .commit()
+            }
+
+            2 -> {
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.nav_container, setting)
+                    .commit()
+            }
+        }
     }
 }

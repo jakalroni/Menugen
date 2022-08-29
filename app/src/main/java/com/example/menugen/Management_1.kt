@@ -1,10 +1,13 @@
 package com.example.menugen
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.menugen.databinding.FragmentManagement1Binding
+import com.example.menugen.databinding.FragmentSettingBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +24,10 @@ class Management_1 : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    // Activity 값을 가져오기 위한 선언 <------------------------------------ 여기부터
+    private var _binding: FragmentManagement1Binding? = null
+    private val binding get() = _binding!!
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -34,7 +41,64 @@ class Management_1 : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_management_1, container, false)
+        _binding = FragmentManagement1Binding.inflate(inflater, container, false)
+        val view = binding.root
+
+        val recommend = activity as Recommend
+        val btn_change = binding.tag3
+        btn_change.setOnClickListener {
+            recommend.changeFragment(2)
+        }
+        return view
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        var meal = AutoLogin.getUserMeal(requireContext())
+
+        // <밥>을 클릭했을 경우
+        binding.tag1.setOnClickListener{
+            // 소분류에 보여지면서 음식 제공
+            val list1 = binding.List1
+            list1.visibility = View.VISIBLE
+            val list2 = binding.List2
+            list2.visibility = View.VISIBLE
+            val list3 = binding.List3
+            list3.visibility = View.VISIBLE
+
+            val list1a = binding.List1a
+            list1a.setText("감자밥")
+            val list2a = binding.List2a
+            list2a.setText("검정콩밥")
+            val list3a = binding.List3a
+            list3a.setText("계란덥밥")
+        }
+
+        binding.tag2.setOnClickListener{
+            // 소분류에 보여지면서 음식 제공
+            val list1 = binding.List1
+            list1.visibility = View.VISIBLE
+            val list2 = binding.List2
+            list2.visibility = View.VISIBLE
+            val list3 = binding.List3
+            list3.visibility = View.VISIBLE
+
+            val list1a = binding.List1a
+            list1a.setText("국수장국")
+            val list2a = binding.List2a
+            list2a.setText("군만두")
+            val list3a = binding.List3a
+            list3a.setText("김치만두")
+        }
+
+        binding.List1a.setOnClickListener{
+
+        }
     }
 
     companion object {
