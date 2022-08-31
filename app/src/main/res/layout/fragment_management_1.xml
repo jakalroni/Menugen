@@ -35,7 +35,6 @@
                     android:orientation="vertical">
 
                     // 태그 버튼 목록1 -> 클릭시 enable="true"로 되게 해야함
-
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -78,53 +77,9 @@
                             android:layout_margin="2dp"
                             android:text="조림" />
                     </LinearLayout>
-                    // 태그 버튼 목록2
 
 
-                    // 음식목록란
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="27dp"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/tag6"
-                            android:layout_width="60dp"
-                            android:layout_height="match_parent"
-                            android:layout_margin="2dp"
-                            android:text="구이" />
-
-                        <Button
-                            android:id="@+id/tag7"
-                            android:layout_width="60dp"
-                            android:layout_height="match_parent"
-                            android:layout_margin="2dp"
-                            android:text="전" />
-
-                        <Button
-                            android:id="@+id/tag8"
-                            android:layout_width="60dp"
-                            android:layout_height="match_parent"
-                            android:layout_margin="2dp"
-                            android:text="튀김" />
-
-                        <Button
-                            android:id="@+id/tag9"
-                            android:layout_width="60dp"
-                            android:layout_height="match_parent"
-                            android:layout_margin="2dp"
-                            android:text="볶음" />
-
-                        <Button
-                            android:id="@+id/tag10"
-                            android:layout_width="60dp"
-                            android:layout_height="match_parent"
-                            android:layout_margin="2dp"
-                            android:text="무침" />
-                    </LinearLayout>
-
+                    // 음식 목록란
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -154,108 +109,40 @@
                             android:id="@+id/foodlist"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"/>
-
                     </LinearLayout>
 
-                    // 식사량 선택란
+
+                    // 최종 음식 확인란
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_margin="10dp"
+                        app:cardBackgroundColor="#EA5656"
+                        app:cardCornerRadius="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:text="최종 선택 메뉴"
+                            android:textColor="#ffffff"
+                            android:textSize="15dp" />
+                    </androidx.cardview.widget.CardView>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="121dp"
+                        android:layout_height="120dp"
                         android:layout_margin="10dp"
                         android:background="@drawable/edge"
                         android:orientation="vertical">
 
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="left"
-                            android:layout_margin="10dp"
-                            app:cardBackgroundColor="#EA5656"
-                            app:cardCornerRadius="15dp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:padding="10dp"
-                                android:text="최종 선택 메뉴"
-                                android:textColor="#ffffff"
-                                android:textSize="15dp" />
-                        </androidx.cardview.widget.CardView>
-
-                        <LinearLayout
+                        // 사용자가 선택한 음식이 뜨는 곳
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/finallist"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            // 사용자가 선택한 음식이 뜨는 곳
-                            <LinearLayout
-                                android:id="@+id/FinalList1"
-                                android:visibility="invisible"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="15dp"
-                                android:layout_marginRight="15dp"
-                                android:background="#32FD4987"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:id="@+id/FinalList1a"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:text="소분류(~밥)"
-                                    android:textSize="15dp" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/FinalList2"
-                                android:visibility="invisible"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="15dp"
-                                android:layout_marginRight="15dp"
-                                android:background="#32FD4987"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:id="@+id/FinalList2a"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:text="소분류(~밥)"
-                                    android:textSize="15dp" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/FinalList3"
-                                android:visibility="invisible"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="15dp"
-                                android:layout_marginRight="15dp"
-                                android:background="#32FD4987"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:id="@+id/FinalList3a"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:text="소분류(~밥)"
-                                    android:textSize="15dp" />
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
-
+                            android:layout_height="match_parent"/>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -264,12 +151,10 @@
                     android:id="@+id/btn_settingFinish"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="식단저장하러 가기"
+                    android:text="식단 저장하기"
                     android:layout_gravity="center"/>
 
             </LinearLayout>
-
         </ScrollView>
-
     </LinearLayout>
 </layout>

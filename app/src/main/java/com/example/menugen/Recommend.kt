@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.widget.Toast
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class Recommend : AppCompatActivity() {
@@ -13,9 +14,13 @@ class Recommend : AppCompatActivity() {
     lateinit var management1: Management_1
     lateinit var setting: SettingFragment
 
+    // private val adapter = RVAdapter(items)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recommend)
+
+        // initLayout()
 
         val userall = intent.getStringExtra("alllist").toString()
         // val alltext = findViewById<TextView>(R.id.idEdit)
@@ -101,4 +106,10 @@ class Recommend : AppCompatActivity() {
             }
         }
     }
+
+    /*
+    fun initLayout(){
+        recyclerview
+    }
+     */
 }

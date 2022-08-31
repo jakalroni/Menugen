@@ -20,6 +20,16 @@ class Management_1 : Fragment() {
     private var _binding: FragmentManagement1Binding? = null
     private val binding get() = _binding!!
 
+    // 최종 음식 확인을 위한 변수
+    val finalitems = mutableListOf<String>()
+    val listAdapter = RVAdapter(finalitems)
+
+    val activity:Recommend? = null
+
+    // RecyclerView가 불러올 목록
+    private var adapter:RVAdapter?=null
+    private val data: MutableList<Member> = mutableListOf()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -33,6 +43,7 @@ class Management_1 : Fragment() {
         val view = binding.root
 
         val recommend = activity as Recommend
+
         val btn_change = binding.tag3
         btn_change.setOnClickListener {
             recommend.changeFragment(2)
@@ -48,8 +59,21 @@ class Management_1 : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        var meal = AutoLogin.getUserMeal(requireContext())
 
+        // var meal = AutoLogin.getUserMeal(requireContext())
+
+
+
+        val recyclerview = view.findViewById<RecyclerView>(R.id.foodlist)
+        val rvAdapter = RVAdapter(finalitems)
+        recyclerview.adapter = rvAdapter
+
+        /*
+        rvAdapter.setItemClickListener(object : RVAdapter.ItemClickListener{
+            override fun onClick(view: View, position: Int){
+
+            }
+        })*/
 
         // <밥>을 클릭했을 경우
         binding.tag1.setOnClickListener{
@@ -75,18 +99,24 @@ class Management_1 : Fragment() {
             items.add("감자된장국(528g)")
 
             val rv = view.findViewById<RecyclerView>(R.id.foodlist)
-
             val rvAdapter = RVAdapter(items)
 
             rv.adapter = rvAdapter
             rv.layoutManager = LinearLayoutManager(context)
         }
-/*
-        binding.List1a.setOnClickListener{
-
-        }
-         */
 
 
+    }
+
+    // https://juahnpop.tistory.com/235
+    // 음식 목록의 음식 옆 추가 클릭 시 최종 음식 확인란에 추가되도록 하는 함수
+    fun addList(position:Int, member: Member){
+        val view = binding.root
+        val finItem = mutableListOf<String>()
+
+        //finItem.add(Member(String))
+
+        val fin = view.findViewById<RecyclerView>(R.id.finallist)
+        // val finAdapter = RVAdapter()
     }
 }
