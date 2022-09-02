@@ -20,6 +20,7 @@ class Management_1 : Fragment() {
     private var _binding: FragmentManagement1Binding? = null
     private val binding get() = _binding!!
 
+    /*
     // 최종 음식 확인을 위한 변수
     val finalitems = mutableListOf<String>()
     val listAdapter = RVAdapter(finalitems)
@@ -29,22 +30,20 @@ class Management_1 : Fragment() {
     // RecyclerView가 불러올 목록
     private var adapter:RVAdapter?=null
     private val data: MutableList<Member> = mutableListOf()
+     */
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentManagement1Binding.inflate(inflater, container, false)
         val view = binding.root
 
         val recommend = activity as Recommend
-
-        val btn_change = binding.tag3
+        val btn_change = binding.SettingFinBtn
         btn_change.setOnClickListener {
             recommend.changeFragment(2)
         }
@@ -59,14 +58,14 @@ class Management_1 : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         // var meal = AutoLogin.getUserMeal(requireContext())
 
-
-
+        val finalitems = mutableListOf<String>()
         val recyclerview = view.findViewById<RecyclerView>(R.id.foodlist)
         val rvAdapter = RVAdapter(finalitems)
         recyclerview.adapter = rvAdapter
+
+
 
         /*
         rvAdapter.setItemClickListener(object : RVAdapter.ItemClickListener{
@@ -108,6 +107,7 @@ class Management_1 : Fragment() {
 
     }
 
+    /*
     // https://juahnpop.tistory.com/235
     // 음식 목록의 음식 옆 추가 클릭 시 최종 음식 확인란에 추가되도록 하는 함수
     fun addList(position:Int, member: Member){
@@ -118,5 +118,12 @@ class Management_1 : Fragment() {
 
         val fin = view.findViewById<RecyclerView>(R.id.finallist)
         // val finAdapter = RVAdapter()
+    }
+     */
+
+    inner class GetData{
+        fun getlist(member: Member){
+
+        }
     }
 }
