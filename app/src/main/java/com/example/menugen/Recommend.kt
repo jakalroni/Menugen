@@ -1,44 +1,61 @@
 package com.example.menugen
 
 // 식단추천 & 식단관리 & 내정보 Fragment 정보를 담을 창
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.widget.Button
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.menugen.databinding.ActivityInfoBinding
+import com.example.menugen.databinding.ActivityNutrientBinding
+import com.example.menugen.databinding.ActivityRecommendBinding
+import com.example.menugen.databinding.ActivitySettingBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class Recommend : AppCompatActivity() {
+    private lateinit var binding: ActivityRecommendBinding
+
+    /*
     // Fragment간 이동을 위한 변수
     lateinit var management1: Management_1
     lateinit var setting: SettingFragment
-
-    // private val adapter = RVAdapter(items)
+     */
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recommend)
 
-        // initLayout()
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_recommend)
 
-        val userall = intent.getStringExtra("alllist").toString()
-        // val alltext = findViewById<TextView>(R.id.idEdit)
-        // alltext.setText(userall)
+
+        // 추천메뉴 아이템 클릭 시, 영양정보 액티비티로 이동
+        binding.largeMenu1.setOnClickListener {
+            val intent = Intent(this, NutrientActivity::class.java)
+            startActivity(intent)
+        }
+
+        // 하단바 각각 액티비티로 이동
+        binding.btnRecommend.setOnClickListener {
+            val intent = Intent(this, Recommend::class.java)
+            startActivity(intent)
+        }
+        binding.btnSetting.setOnClickListener {
+            val intent = Intent(this, SettingActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnInfo.setOnClickListener {
+            val intent = Intent(this, InfoActivity::class.java)
+            startActivity(intent)
+        }
+
+
 
         /*
-        val temp = arrayOf(arrayOf("밥류","쌀밥"), arrayOf("국류","된장국"), arrayOf("구이류","생선구이"), arrayOf("무침류","무침"))
-        val bundle:Bundle = Bundle()
-        bundle.putString("식단", temp.toString())
-        HomeFragment.arguments = bundle
-         */
-
-        // val temp = arrayOf(arrayOf("밥류","쌀밥"), arrayOf("국류","된장국"), arrayOf("구이류","생선구이"), arrayOf("무침류","무침"))
-        // AutoLogin.setUserMeal(this@Recommend, temp)
-
-
-
-        // 하단 탭이 눌렸을 때 화면을 전환하기 위한 객체 생성
+        // 하단 탭이 눌렸을 때 화면을 전환하기 위한 객체 생성 -> Fragment
         var bnv_main = findViewById(R.id.bottom_navigationview) as BottomNavigationView
 
         // OnNavigationItemSelectedListener를 통해 탭 아이템 선택 시 이벤트를 처리
@@ -62,7 +79,7 @@ class Recommend : AppCompatActivity() {
             true
         }
             selectedItemId = R.id.home
-        }
+        } */
     }
 
     // 뒤로가기 방지를 위한 변수
@@ -86,6 +103,7 @@ class Recommend : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed(function, millis)
     }
 
+    /*
     // Fragment간 이동을 위한 함수
     fun changeFragment(index: Int){
         management1 = Management_1()
@@ -106,10 +124,6 @@ class Recommend : AppCompatActivity() {
             }
         }
     }
-
-    /*
-    fun initLayout(){
-        recyclerview
-    }
      */
+
 }

@@ -3,25 +3,25 @@ package com.example.menugen
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.menugen.databinding.ActivityInfoBinding
-import com.example.menugen.databinding.ActivityManagement1Binding
-import com.example.menugen.databinding.ActivityRecommendBinding
-import com.example.menugen.databinding.ActivitySettingBinding
+import androidx.databinding.DataBindingUtil
+import com.example.menugen.databinding.ActivityNutrientBinding
 
-class Management1Activity : AppCompatActivity() {
+class NutrientActivity : AppCompatActivity() {
 
     // 데이터 바인딩
-    private lateinit var binding: ActivityManagement1Binding
+    private lateinit var binding: ActivityNutrientBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_management1)
+        setContentView(R.layout.activity_nutrient)
 
-        // 버튼 클릭을 통한 Management1 액티비티로 이동
-//        binding.SettingFinBtn.setOnClickListener {
-//            val intent = Intent(this, Management1Activity::class.java)
-//            startActivity(intent)
-//        }
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_nutrient)
+
+        // 닫기 버튼 눌러서 다시 추천액티비티로 복귀
+        binding.btnClose.setOnClickListener {
+            val intent = Intent(this, Recommend::class.java)
+            startActivity(intent)
+        }
 
         // 하단바 각각 액티비티로 이동
         binding.btnRecommend.setOnClickListener {

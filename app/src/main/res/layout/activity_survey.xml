@@ -28,7 +28,7 @@
                 android:textStyle="bold"
                 android:textSize="24dp"/>
         </LinearLayout>
-        //여기까지 상단바
+<!--        여기까지 상단바-->
 
         <TextView
             android:layout_width="wrap_content"
@@ -50,7 +50,7 @@
             android:layout_gravity="center"
             android:textColor="@color/black"/>
 
-        // 성별, 나이, 키, 몸무게 입력 설문
+<!--        성별, 나이, 키, 몸무게 입력 설문-->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
             android:layout_gravity="center"
             android:gravity="center">
 
-            // 성별 선택
+<!--            성별 선택-->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
                     android:gravity="center"/>
             </LinearLayout>
 
-            // 키 입력
+<!--            키 입력-->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -120,7 +120,8 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center">
-            // 나이 입력
+
+<!--            나이 입력-->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -151,7 +152,7 @@
                     android:text="cm" />
             </LinearLayout>
 
-            // 몸무게 입력
+<!--            몸무게 입력-->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -183,7 +184,7 @@
             </LinearLayout>
         </LinearLayout>
 
-        // 설문 구분선(위: 신체정보, 아래: 알러지정보)
+<!--        설문 구분선(위: 신체정보, 아래: 알러지정보)-->
         <View
             android:layout_width="match_parent"
             android:layout_height="2px"
@@ -193,7 +194,7 @@
             android:layout_marginRight="30dp"
             android:layout_marginBottom="20dp"/>
 
-        // 알러지 체크 설문
+<!--        알러지 체크 설문-->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -337,7 +338,7 @@
             </LinearLayout>
         </LinearLayout>
 
-        // 설문 구분선(위: 알러지정보, 아래: 질환정보)
+<!--        설문 구분선(위: 알러지정보, 아래: 질환정보)-->
         <View
             android:layout_width="match_parent"
             android:layout_height="2px"
