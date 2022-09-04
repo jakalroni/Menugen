@@ -3,6 +3,7 @@ package com.example.menugen
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
 import androidx.databinding.DataBindingUtil
 import com.example.menugen.databinding.ActivityInfoBinding
 
@@ -16,6 +17,9 @@ class InfoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_info)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_info)
+
+        // 계정약관 textview에 스크롤 달기
+        binding.accountTermText.setMovementMethod(ScrollingMovementMethod())
 
         // 로그아웃 버튼 - 동작처리 필요!!!
 //        binding.btnLogout.setOnClickListener {

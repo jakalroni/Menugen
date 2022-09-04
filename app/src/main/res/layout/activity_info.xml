@@ -113,9 +113,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="50dp"
-                            android:text="건강 관리를 위해"
-                            android:textSize="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:text="목표: 건강 관리를 위해\n키: 180cm\n체중: 75kg\n권장섭취칼로리: 1686kcal"
+                            android:textSize="16dp"
                             android:textStyle="italic" />
                     </LinearLayout>
                 </LinearLayout>
@@ -126,6 +126,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     app:cardBackgroundColor="#EA5656"
                     app:cardCornerRadius="15dp">
@@ -140,48 +141,46 @@
                         android:textSize="15dp" />
                 </androidx.cardview.widget.CardView>
 
-                <ScrollView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/info_box_corner"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:layout_marginLeft="50dp"
-                        android:layout_marginRight="50dp"
-                        android:layout_marginBottom="20dp"
-                        android:background="@drawable/info_box_corner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
                         android:gravity="center"
                         android:orientation="horizontal">
 
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/accountTermText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginRight="15dp"
-                            android:gravity="center"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:padding="10dp"
-                                android:text="@string/accountTerm"
-                                android:textSize="12dp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-<!--                        // 빈 공간 커버 (다른 곳과 달리 적용이 안됨)-->
-                        <LinearLayout
-                            android:id="@+id/empty"
-                            android:layout_width="match_parent"
-                            android:layout_height="200dp"
-                            android:gravity="center"
-                            android:orientation="horizontal">
-                        </LinearLayout>
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:scrollbars="vertical"
+                            android:text="@string/accountTerm"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
                     </LinearLayout>
-                </ScrollView>
+
+                    <!--                        // 빈 공간 커버 (다른 곳과 달리 적용이 안됨)-->
+                    <LinearLayout
+                        android:id="@+id/empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"></LinearLayout>
+                </LinearLayout>
 
 
             </LinearLayout>

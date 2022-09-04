@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         btn_recommend.setOnClickListener {
             // AutoLogin.setUserMeal(this@MainActivity, temp)
             // Log.d("제발", temp.contentDeepToString())
-            val intent = Intent(this, Recommend::class.java)
+            val intent = Intent(this, Guide1Activity::class.java)
             startActivity(intent)
         }
 

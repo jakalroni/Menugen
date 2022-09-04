@@ -3,6 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/JaeWook/AndroidStudioProjects/MenuGen_belugod/app/src/main/res/layout/activity_guide1.xml" value="0.26874366767983787" />
+        <entry key="..\:/Users/JaeWook/AndroidStudioProjects/MenuGen_belugod/app/src/main/res/layout/activity_guide2.xml" value="0.26874366767983787" />
+        <entry key="..\:/Users/JaeWook/AndroidStudioProjects/MenuGen_belugod/app/src/main/res/layout/activity_info.xml" value="0.26874366767983787" />
+        <entry key="..\:/Users/JaeWook/AndroidStudioProjects/MenuGen_belugod/app/src/main/res/layout/activity_login.xml" value="0.26874366767983787" />
+        <entry key="..\:/Users/JaeWook/AndroidStudioProjects/MenuGen_belugod/app/src/main/res/layout/activity_main.xml" value="0.26874366767983787" />
+        <entry key="..\:/Users/JaeWook/AndroidStudioProjects/MenuGen_belugod/app/src/main/res/layout/activity_management1.xml" value="0.26874366767983787" />
+        <entry key="..\:/Users/JaeWook/AndroidStudioProjects/MenuGen_belugod/app/src/main/res/layout/activity_nutrient.xml" value="0.26874366767983787" />
+        <entry key="..\:/Users/JaeWook/AndroidStudioProjects/MenuGen_belugod/app/src/main/res/layout/activity_register.xml" value="0.26874366767983787" />
+        <entry key="..\:/Users/JaeWook/AndroidStudioProjects/MenuGen_belugod/app/src/main/res/layout/activity_setting.xml" value="0.26874366767983787" />
+        <entry key="..\:/Users/JaeWook/AndroidStudioProjects/MenuGen_belugod/app/src/main/res/layout/activity_survey.xml" value="0.26874366767983787" />
+        <entry key="..\:/Users/JaeWook/AndroidStudioProjects/MenuGen_belugod/app/src/main/res/layout/rv_item.xml" value="0.26874366767983787" />
         <entry key="..\:/Users/JaeWook/AndroidStudioProjects/Menugen/app/src/main/res/drawable/allergy.xml" value="0.206" />
         <entry key="..\:/Users/JaeWook/AndroidStudioProjects/Menugen/app/src/main/res/drawable/bowl.xml" value="0.206" />
         <entry key="..\:/Users/JaeWook/AndroidStudioProjects/Menugen/app/src/main/res/drawable/disease.xml" value="0.206" />
